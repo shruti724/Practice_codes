@@ -651,6 +651,35 @@ b1 = Book("war tease", "Leur Han", 1224, 39.54)
 b2 = Book("Core Entity", "Henry", 3524, 139.54)
 
 # access fields
-print(b1.title)
-print(b1.author)
+# print(b1.title)
+# print(b1.author)
+
+# print(b1)
+# print(b2)
+# output: Book(title='war tease', author='Leur Han', pages=1224, price=39.54)
+# Book(title='Core Entity', author='Henry', pages=3524, price=139.54)
+
+# Creating immutable data classes
+# from dataclasses import dataclass
+#
+#
+# @dataclass(frozen=True)
+# class ImmutableClass:
+#     value1: str = "Value 1"
+#     value2: int = 0
+#
+#     def somefunc(self, newval):
+#         self.value2 = newval
+#
+# obj = ImmutableClass()
+# print(obj.value1)
+# # output: Value 1
+#
+# # attempting to change the value of an immutable class throws an error
+# # obj.value1 = "Another value" # dataclasses.FrozenInstanceError: cannot assign to field 'value1'
+# # print(obj.value1)
+#
+# # even functions within the class can't change anything
+# obj.somefunc(20)
+# output: dataclasses.FrozenInstanceError: cannot assign to field 'value2'
 
